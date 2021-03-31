@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/barra-superior.css">
+    <link rel="stylesheet" href="../styles/configuracoes.css">
+    <link rel="stylesheet" href="../styles/suasInfos.css">
+    <link rel="shortcut icon" href="../assets/logotipo.png" type="image/x-icon">
+    <title>Configurações</title>
+</head>
+<body class="fundo" id="fundo">
+    <div class="fundo-falso" id="fundo-falso">
+        <div class="barra-superior">
+            <div class="esquerda-barra-superior">
+                <div class="local-logo-barra-superior" onclick="irPageInicial()">
+                    <img class="logo-barra-superior" src="../assets/logotipo.png" alt="">
+                </div>
+                <div class="caixa-pesquisa-barra-superior">
+                    <div class="div-lupa-caixa-pesquisa-barra-superior">
+                        <img class="lupa-caixa-pesquisa-barra-superior" src="../assets/lupa-pesquisa.png" alt="" onclick="pesquisarAmigo()">
+                    </div>
+                    <div class="div-aparece-resultado" id="div-aparece-resultado"></div>
+                </div>
+                <div class="div-input-pesquisa-barra-superior">
+                    <input class="input-pesquisa-barra-superior" type="text" placeholder="Pesquisar no Bryanbook" onclick="pesquisarAmigoAbre()">
+                </div>
+            </div>
+            <div class="centro-barra-superior">
+                <div class="home-button-barra-superior" title="Configurações">
+                    <div class="div-icon-home-button">
+                        <img class="icon-home-button" src="../assets/img-icon-config-geral.png" alt="">
+                    </div>
+                </div>
+                <div class="marketing-place-button-barra-superior" title="pagina de compras" onclick="irPageInicial()">
+                    <div class="div-icon-marketing-place-button">
+                        <img class="icon-marketing-place-icon" src="../assets/img-icon-house.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="direita-barra-superior">
+                <div class="div-foto-nome-perfil-barra-superior">
+                    <div class="div-foto-barra-superior" id="div-foto-barra-superior">
+                    </div>
+                    <div class="div-nome-apelido-superior">
+                        <h2 class="apelido-barra-superior" id="apelido-barra-superior">Apelido</h2>
+                    </div>
+                </div>
+                <div class="div-notificatios-barra-superior">
+                    <img class="icon-notifications-barra-superior" src="../assets/img-icon-notificacao.png" alt="">
+                </div>
+                <div class="div-help-barra-superior" onclick="irDuvidas()">
+                    <h1 class="icon-help-barra-superior">?</h1>
+                </div>
+                <div class="div-mais-opcoes-barra-superior" onclick="funcoesAbrir()">
+                    <div class="menu_btn configs">
+                        <h1 class="iconMenu">☟</h1>
+                        <div class="submenu" id="submenu">
+                            <ul class="lista-submenu">
+                                <li class="item" onclick="irPageInicial()">
+                                    <div class="titleItem">Pagina Inicial</div>
+                                </li>
+                                <li class="item" onclick="irPageConfig()">
+                                    <div class="titleItem">Configurações</div>
+                                </li>
+                                <li class="item" onclick="irPerfil()">
+                                    <div class="titleItem">Perfil</div>
+                                </li>
+                                <li class="item"
+                                    onclick="localStorage.setItem('usuarioAtual' , JSON.stringify('')); location.href='../pages/login.html'">
+                                    <div class="titleItem">Sair</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="conteudo">
+            <div class="pagesConteudo">
+                <h1 class="tituloPagesConteudo">Configurações</h1>
+                <div class="content1Conteudo">
+                    <div onclick="irPageInicial()" class="itemContent">
+                        <div class="espacoImgContent"><img class="imagemEspacoImg" src="../assets/img-icon-house.png"
+                                alt=""></div><a class="nameContent" href="">Pagina inicial</a>
+                    </div>
+                    <div class="itemContent">
+                        <div class="espacoImgContent"><img class="imagemEspacoImg"
+                                src="../assets/img-icon-config-geral.png" alt=""></div><a class="nameContent"
+                            href="../pages/configuracoes.html">Geral</a>
+                    </div>
+                    <div class="itemContent">
+                        <div class="espacoImgContent"><img class="imagemEspacoImg" src="../assets/img-icon-escudo.png"
+                                alt=""></div><a class="nameContent" href="../pages/configSegurancaLogin.html">Segurança e login</a>
+                    </div>
+                    <div class="itemContent , estaAgora">
+                        <div class="espacoImgContent"><img class="imagemEspacoImg"
+                                src="../assets/img-icon-suas-informacoes.png" alt=""></div><a class="nameContent"
+                            href="../pages/suasInfos.html">Suas informações</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="content1Conteudo">
+                    <div class="itemContent">
+                        <div class="espacoImgContent"><img class="imagemEspacoImg"
+                                src="../assets/img-icon-privacidade.png" alt=""></div><a class="nameContent"
+                            href="../pages/configPrivacidade.html">Privacidade</a>
+                    </div>
+                    <div class="itemContent">
+                        <div class="espacoImgContent"><img class="imagemEspacoImg" src="../assets/img-icon-perfil.png"
+                                alt=""></div><a class="nameContent" href="../pages/perfilUser.html">Perfil</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="content1Conteudo">
+                    <div class="itemContent">
+                        <div class="espacoImgContent"><img class="imagemEspacoImg" src="../assets/img-icon-amizades.png"
+                                alt=""></div><a class="nameContent" href="../pages/configAmizades.html">Amizades</a>
+                    </div>
+                    <div class="itemContent">
+                        <div class="espacoImgContent"><img class="imagemEspacoImg"
+                                src="../assets/img-icon-notificacao.png" alt=""></div><a class="nameContent"
+                            href="">Notificações</a>
+                    </div>
+                    <div class="itemContent">
+                        <div class="espacoImgContent"><img class="imagemEspacoImg" src="../assets/img-icon-ajuda.png"
+                                alt=""></div><a class="nameContent" href="">Ajuda</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contentConteudo">
+                <h1 class="tituloContentConteudo">Suas informações no Bryanbook</h1>
+                <div class="avisoSuasInfos">
+                    <p class="textAvisoInfos">Você pode ver suas informações e excluir sua conta a qualque momento</p>
+                </div>
+                <hr>
+                <div class="conjuntoInfos">
+                    <div class="secaoInfos">
+                        <div class="tituloSecaoInfos">
+                            <h3 class="textTituloSecaoInfos">Acessar suas informações</h3>
+                        </div>
+                        <div class="descricaoSecaoInfos">
+                            <p class="textDescricaoSecaoInfos">Veja suas informações por categoria.</p>
+                        </div>
+                        <div class="divBotaoSecaoInfos">
+                            <button class="botaoSecaoInfos">Ver</button>
+                        </div>
+                    </div>
+                    <div class="secaoInfos">
+                        <div class="tituloSecaoInfos">
+                            <h3 class="textTituloSecaoInfos">Registro de Atividades</h3>
+                        </div>
+                        <div class="descricaoSecaoInfos">
+                            <p class="textDescricaoSecaoInfos">Veja e gerencie suas informações e algumas configurações</p>
+                        </div>
+                        <div class="divBotaoSecaoInfos">
+                            <button class="botaoSecaoInfos">Ver</button>
+                        </div>
+                    </div>
+                    <div class="secaoInfos">
+                        <div class="tituloSecaoInfos">
+                            <h3 class="textTituloSecaoInfos">Gerenciar suas informações</h3>
+                        </div>
+                        <div class="descricaoSecaoInfos">
+                            <p class="textDescricaoSecaoInfos">Saiba mais sobre como você pode gerenciar suas informações</p>
+                        </div>
+                        <div class="divBotaoSecaoInfos">
+                            <button class="botaoSecaoInfos">Ver</button>
+                        </div>
+                    </div>
+                    <div class="secaoInfos">
+                        <div class="tituloSecaoInfos">
+                            <h3 class="textTituloSecaoInfos">Desativação e exclusão</h3>
+                        </div>
+                        <div class="descricaoSecaoInfos">
+                            <p class="textDescricaoSecaoInfos">Desative temporariamente ou exclua permanentemente a sua conta.</p>
+                        </div>
+                        <div class="divBotaoSecaoInfos">
+                            <button class="botaoSecaoInfos">Ver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/back.js"></script>
+    <script src="../scripts/barra-superior.js"></script>
+    <script src="../scripts/pesquisaAmigos.js"></script>
+    <script src="../scripts/configuracoes.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,417 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #18191a;
+}
+.fundo-falso{
+    width: 100vw;
+    height: 100vh;
+    background-color: #18191a;
+    overflow: auto;
+}
+.conteudo{
+    overflow: hidden;
+}
+.superiorPerfilUser{
+    height: 590px;
+    background-image: linear-gradient(to top,#222425, rgb(255, 0, 119));
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.conteudoSuperiorPerfilUser{
+    background-color: chartreuse;
+    width: 60%;
+    height: 40%;
+}
+.capaPerfilUser{
+    background-color: coral;
+    width: 100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.imgCapaPerfilUser{
+    width: 100%;
+    border-radius: 15px;
+}
+.itensVisualSuperioPerfilUser{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: burbank big condensed;
+}
+.fotoPerfilUser{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(206, 3, 3);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.imgFotoUserPerfil{
+    width: 195px;
+    height: 195px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+.caixaInsereLinkNovaFotoUser{
+    display: none;
+    height: 200px;
+    width: 492px;
+    background-color: rgb(19, 19, 19);
+    z-index: 50;
+    min-width: 10%;
+    max-width: 55%;
+    padding: 30px;
+    margin: 0 auto;
+    border-radius: 15px;
+    align-items: center;
+    box-shadow: 5px 10px rgb(0 255 234);
+    position: relative;
+}
+.alinhaCaixaInsereFoto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.divSuperiorAddFoto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.tituloDivSuperiorAddFoto{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin: 0px;
+    margin-left: 19%;
+}
+.divFechaCaixaAddImagem{
+    color: red;
+    cursor: pointer;
+    font-size: 30px;
+    font-family: fantasy, Arial, Helvetica, sans-serif;
+    margin-top: -19%;
+    margin-left: 20%;
+}
+.divFechaCaixaAddImagem:hover{
+    color: rgb(158, 0, 0);
+    transition: 0.3s;
+}
+.inputLinkNovaFoto{
+    width: 80%;
+    height: 40px;
+    background-color: rgb(116, 116, 116);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+}
+.buttonConfirmaNovaFoto{
+    width: 20%;
+    height: 40px;
+    color: white;
+    background-color: rgb(1, 199, 166);
+    border: none;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.buttonConfirmaNovaFoto:hover{
+    background-color: rgb(0, 129, 116);
+    transition: 0.3s;
+}
+.apelidoPerfilUser{
+    display: flex;
+    margin-top: 5px;
+}
+.textApelidoPerfilUser{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.addBiografiaUser{
+    display: flex;
+    margin-top: 5px;
+    cursor: pointer;
+    color: aqua;
+}
+.addBiografiaUser:hover{
+    color: aquamarine;
+}
+
+.inputColocaBiografia{
+    height: 30px;
+    background-color: #3a3b3c;
+    color: #adadad;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.buttonConfirmaBiografia{
+    height: 30px;
+    width: 70px;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.buttonConfirmaBiografia:hover{
+    background-color: rgb(0, 192, 128);
+    color: white;
+    transition: 0.3s;
+}
+.textAddBiografiaUser{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.textBiografia{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.especificacoesPerfilButtons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+.especificacoesButtonsOne{
+    display: flex;
+    align-items: center;
+}
+.buttonEspecificacoes{
+    width: 110px;
+    height: 50px;
+    margin-left: 10px;
+    color:white;
+    background-color: #43434323;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 10px;
+}
+.selecionadoButton{
+    border-width: 0px 0px 3px 0px;
+    border-color: rgb(0, 255, 255);
+    border-style: solid;
+}
+.buttonEspecificacoes:hover{
+    background-color: rgb(0, 255, 255);
+    transition: 0.3s;
+}
+.especificacoesButtonsTwo{
+    display: flex;
+    align-items: center;
+}
+.buttonEspecificacoesTwo{
+    margin-left: 10px;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(71, 71, 71);
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    border-radius: 12px;
+}
+.buttonEspecificacoesTwo:hover{
+    background-color: rgb(150, 0, 0);
+    transform: 0.3s;
+}
+.inferiorPerfilUser{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.alinhaConteudoInferiorPerfil{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 10px;
+}
+.esquerdaConteudoInferiorPerfil{
+    width: 40%;
+}
+.modeloDivEsquerda{
+    height: 500px;
+    background-color: rgb(36, 36, 36);
+    margin: 15px;
+    border-radius: 18px;
+}
+.divApresentacao{
+    background-color: rgb(36, 36, 36);
+    border-radius: 18px;
+}
+.tituloDivModelo{
+    color: white;
+    font-size: 23px;
+    padding: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contentDivApresentacao{
+    padding: 12px;
+    margin-top: -15px;
+}
+.ajustaIntensContentApresentacao{
+    display: flex;
+    align-items: center;
+    background-color: rgb(59, 59, 59);
+    border-radius: 10px;
+    margin-top: 9px;
+}
+.iconeSecaoDivApresentacao{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgIconeSecaoDivApresentacao{
+    width: 40px;
+    height: 40px;
+}
+.mensagemSecaoDivaApresentacao{
+    padding: 5px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+/*Direita*/
+.direitaConteudoInferiorPerfil{
+    width: 58%;
+    margin-top: 12px;
+}
+.cria-pub-content-centro{
+    height: 140px;
+    background-color: #242526;
+    border-radius: 15px;
+    padding: 10px;
+}
+.cria-pub-partSup-content-pubs{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.div-foto-perfil-content-pubs{
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 50%;
+}
+.img-div-foto-perfil-content-pubs{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+.div-input-falso-content-pubs{
+    height: 70px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.input-falso-content-pubs{
+    width: 90%;
+    height: 50px;
+    background-color: #3a3b3c;
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    padding: 5px;
+}
+.text-dentro-input-falso-content-pubs{
+    color: white;
+    margin-left: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.name-text-dentro-input-falso{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 6px;
+}
+.cria-partInf-content-pubs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+}
+.button-pub-falso{
+    width: 300px;
+    height: 50px;
+    background-color: #242526;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.button-pub-falso:hover{
+    background-color: #3a3b3cc4;
+    transition:0.5s;
+}
+.alinha-itens-button-falso{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div-foto-button-falso{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.foto-button-falso{
+    width: 40px;
+    height: 40px;
+}
+.div-text-button-falso{
+    margin-left: 5px;
+}
+.text-button-falso{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.contentInferiorDireita{
+    margin-top: 15px;
+    background-color: #242526;
+    border-radius: 12px;
+}
+.superiorContentInferiorDireita{
+    padding: 10px;
+}
+.titleSuperiorContentInferiorDireita{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.area-pubs{
+    flex-direction: column-reverse;
+    display: flex;
+}

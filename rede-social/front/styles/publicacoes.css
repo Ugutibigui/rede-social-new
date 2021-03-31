@@ -1,0 +1,161 @@
+.div-publicacao-pronta{
+    background-color: #242526;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+.superior-pub-pronta{
+    background-color: #242526;
+    border-radius: 10px 10px 0px 0px ;
+}
+.content-pub-pronta-superior{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.foto-usuario-pub{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: turquoise;
+}
+.pic-foto-usuario-pub{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+.nome-data-pub{
+    margin-left: 10px;
+    width: 300px;
+}
+.nome-tipo-pub-user{
+    display: flex;
+    align-items: center;
+}
+.nome-user-pub{
+    font-family: burbank big condensed;
+    font-size: 25px;
+    color: white;
+}
+.tipoSelect{
+    margin-left: 10px;
+    color: rgb(17, 138, 6);
+    font-family: burbank big condensed;
+}
+.data-pub{
+    font-family: burbank big condensed;
+    font-size: 20px;
+    margin-top: 2px;
+    color: rgb(117, 117, 117);
+}
+.opcoes-pub{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(61, 61, 61);
+    border-radius: 50%;
+    margin-left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.opcoes-pub:hover{
+    background-color: rgb(53, 53, 53);
+    transition: 0.2s;
+}
+.text-icon-opcoes-pub{
+    margin-top: -10px;
+    color: white;
+}
+.inferior-pub-pronta{
+    background-color: #373738 ;
+    height: 100%;
+    padding: 10px;
+    color:white ;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    word-wrap: break-word;
+}
+.interacoes-pub-pronta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.class-button-geral-pub-interacoes{
+    margin: 10px;
+}
+.div-button-curtir{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-curtir{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(49, 49, 49);
+    min-width: 200px;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 40px;
+}
+.button-curtir:hover{
+    background-color: rgb(77, 77, 77);
+    transition: 0.3s;
+}
+.pic-icon-curtir{
+    width: 30px;
+    height: 30px;
+}
+.text-curtir{
+    color: white;
+    margin-left: 3px;
+    font-family: burbank big condensed;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+.div-button-comentar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-comentar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(49, 49, 49);
+    min-width: 200px;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 40px;
+}
+.button-comentar:hover{
+    background-color: rgb(77, 77, 77);
+    transition: 0.3s;
+}
+.pic-icon-comentar{
+    width: 30px;
+    height: 30px;
+}
+.text-comentar{
+    color: white;
+    margin-left: 3px; 
+    font-family: burbank big condensed;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+.inferior-pub-area-video{
+    background-color:#373738;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.postagem-video{
+    width: 100%;
+    outline: none;
+}
+.postagem-content{
+    width: 100%;
+}

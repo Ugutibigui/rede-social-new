@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/barra-superior.css">
+    <link rel="stylesheet" href="../styles/perfilUser.css">
+    <link rel="stylesheet" href="../styles/div-publicar-perfil.css">
+    <link rel="shortcut icon" href="../assets/logotipo.png" type="image/x-icon">
+    <title>Configurações</title>
+</head>
+
+<body class="fundo" id="fundo">
+
+    <div class="div-publicar-real-text" id="div-publicar-real-text">
+        <div class="superior-div-pub-text">
+            <div class="div-title-superior-pub-text">
+                <h1 class="title-superior-pub-text">Criar publicação</h1>
+            </div>
+            <div class="div-button-fecha-div-publicar-text" onclick="fecharAbaPubText()">
+                <h1 class="text-button-fecha-div-publicar-text">X</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="meio-div-pub-text">
+            <div class="div1-meio-div-pub-text">
+                <div class="foto-perfil-div1-pub-text"></div>
+                <div class="part2-div1-nome-pub">
+                    <h3 class="name-pessoa-pub-div1" id="name-pessoa-pub-div1">Apelido</h3>
+                    <select name="Amigos" id="opcaoPv" class="select-div1-pub">
+                        <option value="">Publico</option>
+                        <option value="">Privado</option>
+                    </select>
+                </div>
+            </div>
+            <div class="div2-meio-div-pub-text">
+                <textarea placeholder="No que você está pensando?" name="" cols="30" rows="10"
+                    class="textarea-div2-meio-div-pub-text" id="textarea-div2-meio-div-pub-text"></textarea>
+            </div>
+        </div>
+        <div class="inferior-div-pub-text">
+            <div class="options-pub-text">
+                <div class="div-text-options-pub">
+                    <h3 class="text-options-pub">Adicionar mais publicações</h3>
+                </div>
+                <div class="div-options-pics">
+                    <img src="../assets/icon-foto.png" alt="" class="pic-options-button" onclick="trocarParaFoto()">
+                    <img src="../assets/icon-video.png" alt="" class="pic-options-button" onclick="trocarParaVideo()">
+                    <img src="../assets/icon-text.png" alt="" class="pic-options-button" onclick="trocarParaTexto()">
+                </div>
+            </div>
+            <div class="button-publica-pub-text" onclick="publicaText()">
+                <h3 class="text-button-publicar">Publicar</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="div-publicar-real-video" id="div-publicar-real-video">
+        <div class="superior-div-pub-video">
+            <div class="div-title-superior-pub-video">
+                <h1 class="title-superior-pub-video">Criar publicação</h1>
+            </div>
+            <div class="div-button-fecha-div-publicar-video" onclick="fecharAbaPubVideo()">
+                <h1 class="text-button-fecha-div-publicar-video">X</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="meio-div-pub-video">
+            <div class="div1-meio-div-pub-video">
+                <div class="foto-perfil-div1-pub-video"></div>
+                <div class="part2-div1-nome-pub-video">
+                    <h3 class="name-pessoa-pub-div1-video" id="name-pessoa-pub-div1-video">Apelido</h3>
+                    <select name="Amigos" id="" class="select-div1-pub-video">
+                        <option value="Publico">Publico</option>
+                        <option value="Privado">Privado</option>
+                    </select>
+                </div>
+            </div>
+            <div class="div2-meio-div-pub-video">
+                <textarea placeholder="No que você está pensando?" name="" cols="30" rows="10"
+                    class="textarea-div2-meio-div-pub-text-video" id="textarea-div2-meio-div-pub-text-video"></textarea>
+            </div>
+        </div>
+        <div class="inferior-div-pub-video">
+            <div class="options-pub-video">
+                <div class="div-text-options-pub-video">
+                    <h3 class="text-options-pub-video">Link do video</h3>
+                </div>
+                <div class="div-local-link-video">
+                    <input class="local-link-video" type="text" id="local-link-video">
+                </div>
+            </div>
+            <div class="button-publica-pub-video" onclick="publicaVideo()">
+                <h3 class="video-button-publicar">Publicar</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="div-publicar-real-img" id="div-publicar-real-img">
+        <div class="superior-div-pub-img">
+            <div class="div-title-superior-pub-img">
+                <h1 class="title-superior-pub-img">Criar publicação</h1>
+            </div>
+            <div class="div-button-fecha-div-publicar-img" onclick="fecharAbaPubImg()">
+                <h1 class="text-button-fecha-div-publicar-img">X</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="meio-div-pub-img">
+            <div class="div1-meio-div-pub-img">
+                <div class="foto-perfil-div1-pub-img"></div>
+                <div class="part2-div1-nome-pub-img">
+                    <h3 class="name-pessoa-pub-div1-img" id="name-pessoa-pub-div1-img">Apelido</h3>
+                    <select name="Amigos" id="" class="select-div1-pub-img">
+                        <option value="">Publico</option>
+                        <option value="">Privado</option>
+                    </select>
+                </div>
+            </div>
+            <div class="div2-meio-div-pub-img">
+                <textarea placeholder="No que você está pensando?" name="" cols="30" rows="10"
+                    class="textarea-div2-meio-div-pub-text-img" id="textarea-div2-meio-div-pub-text-img"></textarea>
+            </div>
+        </div>
+        <div class="inferior-div-pub-img">
+            <div class="options-pub-img">
+                <div class="div-text-options-pub-img">
+                    <h3 class="text-options-pub-img">Link da Imagem</h3>
+                </div>
+                <div class="div-local-link-img">
+                    <input class="local-link-img" type="text" id="local-link-img">
+                </div>
+            </div>
+            <div class="button-publica-pub-img" onclick="publicaImg()">
+                <h3 class="img-button-publicar">Publicar</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="caixaInsereLinkNovaFotoUser" id="caixaInsereLinkNovaFotoUser">
+        <div class="alinhaCaixaInsereFoto">
+            <div class="divSuperiorAddFoto">
+                <h1 class="tituloDivSuperiorAddFoto">Adicionar nova foto</h1>
+                <div class="divFechaCaixaAddImagem" onclick="fechaNovaFoto()">X</div>
+            </div>
+            <input type="text" name="" id="inputLinkNovaFoto" class="inputLinkNovaFoto" placeholder="Insira o link da foto">
+            <button class="buttonConfirmaNovaFoto" onclick="confirmaNovaFoto()">Confirmar</button>
+        </div>
+    </div>
+
+    <div class="fundo-falso" id="fundo-falso">
+        <div class="barra-superior">
+            <div class="esquerda-barra-superior">
+                <div class="local-logo-barra-superior" onclick="irPageInicial()">
+                    <img class="logo-barra-superior" src="../assets/logotipo.png" alt="">
+                </div>
+                <div class="caixa-pesquisa-barra-superior">
+                    <div class="div-lupa-caixa-pesquisa-barra-superior">
+                        <img class="lupa-caixa-pesquisa-barra-superior" src="../assets/lupa-pesquisa.png" alt=""
+                            onclick="pesquisarAmigo()">
+                    </div>
+                    <div class="div-aparece-resultado" id="div-aparece-resultado"></div>
+                </div>
+                <div class="div-input-pesquisa-barra-superior">
+                    <input class="input-pesquisa-barra-superior" type="text" placeholder="Pesquisar no Bryanbook"
+                        onclick="pesquisarAmigoAbre()">
+                </div>
+            </div>
+            <div class="centro-barra-superior">
+                <div class="home-button-barra-superior" title="Configurações">
+                    <div class="div-icon-home-button">
+                        <img class="icon-home-button" src="../assets/img-icon-perfil.png" alt="">
+                    </div>
+                </div>
+                <div class="marketing-place-button-barra-superior" title="pagina de compras" onclick="irPageInicial()">
+                    <div class="div-icon-marketing-place-button">
+                        <img class="icon-marketing-place-icon" src="../assets/img-icon-house.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="direita-barra-superior">
+                <div class="div-foto-nome-perfil-barra-superior">
+                    <div class="div-foto-barra-superior" id="div-foto-barra-superior">
+                    </div>
+                    <div class="div-nome-apelido-superior">
+                        <h2 class="apelido-barra-superior" id="apelido-barra-superior">Apelido</h2>
+                    </div>
+                </div>
+                <div class="div-notificatios-barra-superior">
+                    <img class="icon-notifications-barra-superior" src="../assets/img-icon-notificacao.png" alt="">
+                </div>
+                <div class="div-help-barra-superior" onclick="irDuvidas()">
+                    <h1 class="icon-help-barra-superior">?</h1>
+                </div>
+                <div class="div-mais-opcoes-barra-superior" onclick="funcoesAbrir()">
+                    <div class="menu_btn configs">
+                        <h1 class="iconMenu">☟</h1>
+                        <div class="submenu" id="submenu">
+                            <ul class="lista-submenu">
+                                <li class="item" onclick="irPageInicial()">
+                                    <div class="titleItem">Pagina Inicial</div>
+                                </li>
+                                <li class="item" onclick="irPageConfig()">
+                                    <div class="titleItem">Configurações</div>
+                                </li>
+                                <li class="item" onclick="irPerfil()">
+                                    <div class="titleItem">Perfil</div>
+                                </li>
+                                <li class="item"
+                                    onclick="localStorage.setItem('usuarioAtual' , JSON.stringify('')); location.href='../pages/login.html'">
+                                    <div class="titleItem">Sair</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="conteudo">
+            <div class="superiorPerfilUser" id="superiorPerfilUser">
+                <div class="conteudoSuperiorPerfilUser">
+                    <div class="capaPerfilUser">
+                        <img class="imgCapaPerfilUser"
+                            src="https://www.showmetech.com.br/wp-content/uploads//2017/01/outrun_wallpaper__10_-2017-01-25-0516.jpg"
+                            alt="">
+                    </div>
+                </div>
+                <div class="itensVisualSuperioPerfilUser">
+                    <div class="fotoPerfilUser"  id="imgFotoUserPerfil">
+                        <img class="imgFotoUserPerfil" onclick="trocarFotoUser()"
+                            src="http://cm1.narvii.com/7312/9c09f4447259affc3a9077a129ce18dbb0785823_00.jpg" alt="">
+                    </div>
+                    <div class="apelidoPerfilUser">
+                        <h1 class="textApelidoPerfilUser" id="textApelidoPerfilUser">Apelido</h1>
+                    </div>
+                    <div class="addBiografiaUser" id="localAddBiografia">
+                        <h3 class="textAddBiografiaUser" onclick="trocaBiografia()">Adicionar biografia</h3>
+                    </div>
+                </div>
+                <div class="especificacoesPerfilButtons">
+                    <div class="especificacoesButtonsOne">
+                        <button class="buttonEspecificacoes , selecionadoButton">Publicações</button>
+                        <button class="buttonEspecificacoes">Sobre</button>
+                        <button class="buttonEspecificacoes">Amigos</button>
+                        <button class="buttonEspecificacoes">Fotos</button>
+                    </div>
+                    <div class="especificacoesButtonsTwo">
+                        <button class="buttonEspecificacoesTwo">Editar perfil</button>
+                        <button class="buttonEspecificacoesTwo">👁</button>
+                        <button class="buttonEspecificacoesTwo" onclick="irPageConfig()">Configurações</button>
+                    </div>
+                </div>
+            </div>
+            <div class="inferiorPerfilUser">
+                <div class="alinhaConteudoInferiorPerfil">
+                    <div class="esquerdaConteudoInferiorPerfil">
+                        <div class="divApresentacao , modeloDivEsquerda">
+                            <h1 class="tituloDivModelo">Apresentação</h1>
+                            <div class="contentDivApresentacao">
+                                <div class="ajustaIntensContentApresentacao">
+                                    <div class="iconeSecaoDivApresentacao">
+                                        <img class="imgIconeSecaoDivApresentacao" src="../assets/icon-foto.png" alt="">
+                                    </div>
+                                    <div class="mensagemSecaoDivaApresentacao">
+                                        <h3 class="textMensagemSecaoDivApresentacao">Texto</h3>
+                                    </div>
+                                </div>
+                                <div class="ajustaIntensContentApresentacao">
+                                    <div class="iconeSecaoDivApresentacao">
+                                        <img class="imgIconeSecaoDivApresentacao" src="../assets/icon-foto.png" alt="">
+                                    </div>
+                                    <div class="mensagemSecaoDivaApresentacao">
+                                        <h3 class="textMensagemSecaoDivApresentacao">Texto</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divFotos , modeloDivEsquerda">
+                            <h1 class="tituloDivModelo">Fotos</h1>
+                        </div>
+                        <div class="divAmigos , modeloDivEsquerda">
+                            <h1 class="tituloDivModelo">Amigos</h1>
+                        </div>
+                    </div>
+                    <div class="direitaConteudoInferiorPerfil">
+                        <div class="cria-pub-content-centro">
+                            <div class="cria-pub-partSup-content-pubs">
+                                <div class="div-foto-perfil-content-pubs" id="div-foto-perfil-content-pubs"></div>
+                                <div class="div-input-falso-content-pubs">
+                                    <div class="input-falso-content-pubs" onclick="abrirAbaPubText()">
+                                        <h2 class="text-dentro-input-falso-content-pubs"
+                                            id="text-dentro-input-falso-content-pubs">No que você está pensando hoje,
+                                            Pessoa?</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="cria-partInf-content-pubs">
+                                <div class="button-pub-falso" onclick="abrirAbaPubImg()">
+                                    <div class="alinha-itens-button-falso">
+                                        <div class="div-foto-button-falso">
+                                            <img class="foto-button-falso" src="../assets/icon-foto.png" alt="">
+                                        </div>
+                                        <div class="div-text-button-falso">
+                                            <h3 class="text-button-falso">Fotos</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button-pub-falso" onclick="abrirAbaPubVideo()">
+                                    <div class="alinha-itens-button-falso">
+                                        <div class="div-foto-button-falso">
+                                            <img class="foto-button-falso" src="../assets/icon-video.png" alt="">
+                                        </div>
+                                        <div class="div-text-button-falso">
+                                            <h3 class="text-button-falso">Videos</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contentInferiorDireita">
+                            <div class="superiorContentInferiorDireita">
+                                <h2 class="titleSuperiorContentInferiorDireita">Publicações</h2>
+                            </div>
+                        </div>
+                        <div class="area-pubs" id="area-pubs"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script src="../scripts/back.js"></script>
+    <script src="../scripts/barra-superior.js"></script>
+    <script src="../scripts/pesquisaAmigos.js"></script>
+    <script src="../scripts/perfilUser.js"></script>
+    <script src="../scripts/publicar-perfil.js"></script>
+</body>
+
+</html>

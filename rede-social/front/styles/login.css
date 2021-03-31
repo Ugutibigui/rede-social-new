@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.fundao{
+    background-color: rgb(41, 41, 41);
+}
+/*Todo o conteudo de login */
+.fundo-falso{
+    background-color: rgb(41, 41, 41);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+}
+.geral{
+    min-width: 10%;
+    max-width: 55%;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    margin-top: 120px;
+}
+.texts-inicio{
+    min-width: 10%;
+    max-width: 55%;
+    color: white;
+}
+.title-pagina{
+    font-family: burbank big condensed;
+    font-size: 75px;
+    color: #1877f2;
+}
+.text-subtitle{
+    font-family: SFProDisplay-Bold, Helvetica, Arial, sans-serif;
+    font-size: 30px;
+}
+.caixa-login{
+    background-color: black;
+    width: 38%;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: 74px;
+    box-shadow: 13px 13px 0px -2px rgb(235 231 231), 0 10px 16px rgb(0 0 0);
+    box-sizing: border-box;
+}
+.caixas-text{
+    margin-top: 20px;
+    width: 100%;
+}
+.organize-apelido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.caixa{
+    background: #ffffff;
+    border: 1px solid #dddfe2;
+    color: #000000;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    height: 40px;
+    line-height: 16px;
+    padding: 0 8px;
+    vertical-align: middle;
+    margin-top: 10px;
+    width: 80%;
+}
+.caixa-apelido{
+    width: 85%;;
+}
+.organize-senha{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ver-senha-login{
+    height: 43px;
+    margin-top: 10.4px;
+    cursor: pointer;
+}
+.caixa-button{
+    display: flex;
+    flex-direction: column;
+    width: 89%;
+    margin-top: 10px;
+    height: 25%;
+}
+.botao-logar{
+    height: 40px;
+    background-color: #1877f2;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor:pointer;
+    outline: none;
+}
+.botao-logar:hover{
+    background-color: #0b54b3;
+    transition: 0.5s;
+}
+.link-esquece-senha{
+    color: rgb(4, 255, 201);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.hr-logar{
+    border: 1px solid white; 
+    width: 90%;
+    margin: 0;
+}
+.caixa-botao-cria-conta{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.botao-abrir-cria-conta{
+    width: 50%;
+    height: 43px;
+    margin-top: 40px;
+    background-color: #42b72a ;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    outline: none;
+}
+.botao-abrir-cria-conta:hover{
+    background-color: #208b0b;
+    transition: 0.5s;
+}
+footer{
+    margin: 0 auto;
+    width: 60%;
+    margin-top: 15%;
+}
+.paises{
+    display: flex;
+    align-items: center;
+}
+.pais{
+    color: white;
+    margin-left: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+.click-pais{
+    color: greenyellow;
+}
+.hr-footer{
+    margin-top: 8px;
+}
+.footer-inferior{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.fct-footer{
+    color: white;
+    margin-left: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+/*Div de login*/
+.div-cadastro{
+    display: none;
+    height: 525px;
+    width: 432px;
+    background-color: rgb(19, 19, 19);
+    z-index: 20;
+    min-width: 10%;
+    max-width: 55%;
+    padding: 30px;
+    margin: 0 auto;
+    border-radius: 15px;
+    align-items: center;
+    margin-top: 120px;
+}
+.fechar{
+    float: right;
+    color: white;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+}
+.fechar:hover{
+    color: crimson;
+}
+.text-cadastro{
+    color: white;
+}
+.titulo-cadastro{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.subtitulo-cadastro{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+}
+.hr-cadastro{
+    margin-top: 10px;
+}
+.inputs-infos{
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.inputs-superiores{
+    display: flex;
+    align-items: center;
+}
+.input-text{
+    background: white;
+    border-radius: 5px;
+    width: 428px;
+    border: none;
+    height: 35px;
+    margin-top: 10px;
+    margin-left: -5px;
+    padding: 5px;
+}
+.nome{
+    margin-left: -5px;
+    font-size: 15px;
+}
+.sobrenome{
+    margin-left: 10px;
+    width: 150px;
+    font-size: 15px;
+}
+.inputs-inferiores{
+    width: 399px;
+}
+.apelido{
+    font-size: 15px;
+}
+.senha{
+    font-size: 15px;
+}
+.text-cadastro{
+    margin-top: 15px;
+    font-size: 13px;
+}
+.prg-text-cadastro{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.links-page-cadastro{
+    color:#1877f2;
+    text-decoration: none;
+}
+.btn-cadastro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: -40%;
+}
+.botao-cadastro{
+    background-color: #00a400;
+    width: 210px;
+    height: 60px;
+    border: none;
+    color: white;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+}
+.botao-cadastro:hover{
+    background-color: #135c04;
+    transition: 0.5s;
+}

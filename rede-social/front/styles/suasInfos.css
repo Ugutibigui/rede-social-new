@@ -1,0 +1,62 @@
+.avisoSuasInfos{
+    width: 97%;
+    height: 5%;
+    border: 1px solid rgb(56, 56, 56);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.textAvisoInfos{
+    color: rgb(218, 214, 214);
+}
+.conjuntoInfos{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.secaoInfos{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    background-color: rgb(15, 15, 15);
+    height: 50px;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.secaoInfos:hover{
+    background-color: rgb(34, 34, 34);
+}
+.tituloSecaoInfos{
+    margin: 0;
+    width: 40%;
+}
+.textTituloSecaoInfos{
+    font-size: 19px;
+    color: white;
+}
+.descricaoSecaoInfos{
+    color: white;
+    width: 90%;
+}
+.textDescricaoSecaoInfos{
+    font-size: 16px;
+    color: rgb(168, 168, 168);
+}
+.divBotaoSecaoInfos{
+    width: 5%;
+}
+.botaoSecaoInfos{
+    font-size: 20px;
+    width: 60px;
+    height: 25px;
+    margin-left: -20px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(29, 29, 29);
+    color: rgb(35, 93, 255);
+}
+.botaoSecaoInfos:hover{
+    background-color: rgb(0, 0, 0);
+}

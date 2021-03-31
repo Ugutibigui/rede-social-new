@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/login.css">
+    <title>Bryanbook</title>
+</head>
+<body class="fundao">
+    <div class="div-cadastro" id="div-cadastro">
+        <div class="fechar" onclick="fecharCadastro()">X</div>
+        <div class="text-cadastro">
+            <h1 class="titulo-cadastro">Cadastre-se</h1>
+            <h4 class="subtitulo-cadastro">É rápido e fácil.</h4>
+        </div>
+        <hr class="hr-cadastro">
+        <div class="inputs-infos">
+            <div class="inputs-superiores">
+                <input type="text" required placeholder="Nome" class="input-text , nome , inputs-superiores" id="nome-cadastro-user">
+                <input type="text" required placeholder="Sobrenome" class="input-text , sobrenome , inputs-superiores" id="sobrenome-cadastro-user">
+            </div>
+            <div class="inputs-inferiores">
+                <input type="text" placeholder="Apelido" class="input-text , apelido" id="apelido-cadastro-user">
+                <input type="password" placeholder="Senha" class="input-text , senha" id="senha-cadastro-user">
+                <input type="text" placeholder="Insira um link para foto de perfil" class="input-text , apelido" id="foto-perfil">
+            </div>
+        </div>
+        <div class="text-cadastro">
+            <p class="prg-text-cadastro">Ao clicar em Cadastre-se, você concorda com nossos <a class="links-page-cadastro" href="#">Termos</a>, <a class="links-page-cadastro" href="">Política de Dados</a> e <a class="links-page-cadastro" href="">Política de Cookies</a>. Você poderá receber notificações por SMS e cancelar isso quando quiser.</p>
+        </div>
+        <div class="btn-cadastro">
+            <button type="submit" class="botao-cadastro" id="botao-cadastro" onclick="cadastrarNovoUsuario()">Cadastre-se</button>
+        </div>
+    </div>
+    <div class="fundo-falso" id="fundo-falso">
+        <div class="geral">
+            <div class="texts-inicio">
+                <h1 class="title-pagina">Bryanbook</h1>
+                <h3 class="text-subtitle">O Bryanbook ajuda você a se conectar e compartilhar com as pessoas que fazem
+                    parte da sua vida.</h3>
+            </div>
+            <div class="caixa-login">
+                <div class="caixas-text">
+                    <div class="organize-apelido">
+                        <input type="text" required placeholder="Apelido" class="caixa-apelido , caixa" id="apelido-login">
+                    </div>
+                    <div class="organize-senha">
+                        <input type="password" required placeholder="Senha" class="caixa-senha , caixa" id="caixa-senha-login">
+                        <button class="ver-senha-login" onclick="mostrarSenha()">👁‍🗨</button>
+                    </div>
+                </div>
+                <div class="caixa-button">
+                    <button class="botao-logar" type="submit" onclick="entrar()">Entrar</button>
+                    <a class="link-esquece-senha" href="#">Esqueceu a senha?</a>
+                </div>
+                <hr class="hr-logar">
+                <div class="caixa-botao-cria-conta">
+                    <button class="botao-abrir-cria-conta" onclick="abrirCriarConta()">Criar nova conta</button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="paises">
+                <a class="pais , click-pais" href="">Português (Brasil)</a>
+                <a class="pais" href="../pages/login-ingles.html">English (US)</a>
+                <a class="pais" href="">Español</a>
+                <a class="pais" href="">Français (France)</a>
+                <a class="pais" href="">Italiano</a>
+                <a class="pais" href="">العربية</a>
+                <a class="pais" href="">Deutsch</a>
+                <a class="pais" href="">中文(简体)</a>
+            </div>
+            <hr class="hr-footer">
+            <div class="footer-inferior">
+                <a class="fct-footer" href="">Cadastre-se</a>
+                <a class="fct-footer" href="">Entrar</a>
+                <a class="fct-footer" href="">Ajuda</a>
+                <a class="fct-footer" href="">Mensagens</a>
+                <a class="fct-footer" href="">Pessoas</a>
+                <a class="fct-footer" href="">Sobre</a>
+            </div>
+            <div class="footer-inferior">
+                <a class="fct-footer" href="">Privacidade</a>
+                <a class="fct-footer" href="">Segurança</a>
+                <a class="fct-footer" href="">Privacidade</a>
+            </div>
+        </footer>
+    </div>
+    <script src="../scripts/back.js"></script>
+    <script src="../scripts/login.js"></script>
+</body>
+</html>

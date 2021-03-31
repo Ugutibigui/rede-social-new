@@ -1,0 +1,409 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.barra-superior{
+    background-color: #242526;
+    height: 55px;
+    border-width: 0px 0px 0.5px 0px;
+    border-style: solid;
+    border-color: rgb(51, 51, 51);
+    display: flex;
+    align-items: center;
+
+}
+.esquerda-barra-superior{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 350px;
+}
+.local-logo-barra-superior{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.logo-barra-superior{
+    width:40px;
+    height: 40px;
+}
+.caixa-pesquisa-barra-superior{
+    margin-left: 0px;
+    background-color: #3a3b3c;
+    width: 281px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+}
+.caixa-pesquisa-barra-superior:hover{
+    border-width: 2px 0px 2px 0px;
+    border-style: solid;
+    border-color: rgb(0, 255, 234);
+    border-radius: 50px;
+}
+.div-lupa-caixa-pesquisa-barra-superior{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin-left: 2px;
+    background-color: #3a3b3c;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.lupa-caixa-pesquisa-barra-superior{
+color: chartreuse;
+width: 30px;
+height: 30px;
+margin-left: 25px;
+}
+.div-aparece-resultado{
+    margin-top: 69%;
+    width:281px;
+    min-height: 150px;
+    max-height: 300px;
+    display: none;
+    z-index: 20;
+    margin-left: -32px;
+    background-color: rgb(75, 75, 75);
+    border-radius: 0px 0px 15px 15px;
+    overflow: auto;
+}
+.divUsuarioEncontrado{
+    background-color: #282828;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.divUsuarioEncontrado:hover{
+    background-color: #202020;
+    transition: 0.3s;
+}
+.arrumaDivUsuarioEncontrado{
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+.divFotoUsuarioEncontrado{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+}
+.fotoUsuarioEncontrado{
+    width: 30px;
+    height: 30px;
+}
+.divNomeUsuarioEncontrado{
+    width: 90%;
+    color: white;
+    margin-left: 10px;
+}
+.textDivNomeUsuarioEncontrado{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.usuarioNaoEncontrado{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.textUsuarioNaoEncontrado{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+}
+.div-input-pesquisa-barra-superior{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 190px;
+    margin-left: -220px;
+    padding: 10px;
+}
+.input-pesquisa-barra-superior{
+    height: 30px;
+    background-color: #3a3b3c;
+    border: none;
+    width: 250px;
+    outline: none;
+    color: white;
+    font-size: 17px;
+}
+::-webkit-input-placeholder {
+    color: rgb(190, 190, 190);
+ }
+.centro-barra-superior{
+    width: 680px;
+    height: 50px;
+    margin: 0px auto;
+    border-radius: 15px;
+    margin-right: 14%;
+    display: flex;
+    align-items: center;
+}
+.home-button-barra-superior{
+    width: 340px;
+    height: 50px;
+    border-width: 2px 0px 2px 0px;
+    border-style: solid;
+    border-color: rgb(0, 255, 234);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.home-button-barra-superior:hover{
+    border-width: 2px 0px 2px 0px;
+    border-style: solid;
+    border-color: rgb(0, 255, 234);
+    border-radius: 10px;
+    transition: 0.3s;
+    background-color: rgba(128, 128, 128, 0.555);
+}
+.div-icon-home-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-home-button{
+    width: 50px;
+    height: 50px;
+}
+.marketing-place-button-barra-superior{
+    width: 340px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.marketing-place-button-barra-superior:hover{
+    border-width: 2px 0px 2px 0px;
+    border-style: solid;
+    border-color: rgb(0, 255, 234);
+    border-radius: 10px;
+    transition: 0.3s;
+    background-color: rgba(128, 128, 128, 0.555);
+}
+.div-icon-marketing-place-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-marketing-place-icon{
+    width: 50px;
+    height: 50px;
+}
+.direita-barra-superior{
+    display: flex;
+    align-items: center;
+    width: 343px;
+    height: 50px;
+}
+.div-foto-nome-perfil-barra-superior{
+    width: 180px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(65, 65, 65, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.div-foto-nome-perfil-barra-superior:hover{
+    border-width: 2px 0px 2px 0px;
+    border-style: solid;
+    border-color: rgb(0, 255, 234);
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.div-foto-barra-superior{
+    display: flex;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.img-div-barra-superior{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+}
+.div-nome-apelido-superior{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.apelido-barra-superior{
+    margin-left: -23px;
+    color: white;
+    font-family: burbank big condensed;
+    font-size: 30px;
+}
+.div-notificatios-barra-superior{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 8px;
+    cursor: pointer;
+}
+.div-notificatios-barra-superior:hover{
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    border-color: rgb(0, 255, 234);
+    transition: 0.3s;
+}
+.icon-notifications-barra-superior{
+    width: 40px;
+    height: 40px;
+}
+.div-help-barra-superior{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 8px;
+    cursor: pointer;
+}
+.div-help-barra-superior:hover{
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    border-color: rgb(0, 255, 234);
+    transition: 0.3s;
+}
+.icon-help-barra-superior{
+    color: rgb(94, 94, 94);
+    font-family: burbank big condensed;
+    margin-top: 7px;
+}
+.div-mais-opcoes-barra-superior{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 8px;
+    cursor: pointer;
+}
+.div-mais-opcoes-barra-superior:hover{
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    border-color: rgb(0, 255, 234);
+    transition: 0.3s;
+}
+.menu_btn{
+    
+}
+.submenu{
+    margin-top: 368px;
+    background-color: #242526;
+    width: 420px;
+    height: 350px;
+    margin-left: -380px;
+    border-radius: 15px;
+    display: none;
+    z-index: 10;
+    position: relative;
+}
+.lista-submenu{
+    padding: 10px;
+}
+.item{
+    list-style: none;
+    border-radius: 10px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+.item:hover{
+   background-color: rgba(128, 128, 128, 0.555);
+}
+.titleItem{
+    line-height: 120%;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+    font-family: burbank big condensed;
+}
+/*Responsividade*/
+@media screen and (max-width:1200px) {
+    .direita-barra-superior {
+      margin-left: -100px;
+    }
+    .centro-barra-superior{
+        margin-left: -0%;
+        width: 30%;
+    }
+  } 
+  @media screen and (max-width:1570px) {
+    .direita-barra-superior {
+      margin-left: -210px;
+    }
+    .centro-barra-superior{
+        margin-left: 8%;
+        width: 50%;
+    }
+  } 
+  @media screen and (max-width:1750px) {
+    .direita-barra-superior {
+      margin-left: -100px;
+    }
+    .centro-barra-superior{
+        margin-left: 15%;
+        width: 30%;
+    }
+  }
+  @media screen and (max-width:1420px) {
+    .direita-barra-superior {
+      margin-left: -100px;
+    }
+    .centro-barra-superior{
+        margin-left: 8%;
+        width: 30%;
+    }
+  }
+  @media screen and (max-width:414px) {
+    .direita-barra-superior {
+      margin-left: 5px;
+    }
+    .centro-barra-superior{
+        display: none;
+    }
+    .caixa-pesquisa-barra-superior{
+        width: 20%;
+        margin-left: 50px;
+        display: none;
+    }
+    .div-input-pesquisa-barra-superior{
+        display: none;
+    }
+    .div-foto-nome-perfil-barra-superior{
+        width: 40%;
+    }
+    .div-foto-barra-superior{
+        width: 40px;
+        height:30px;
+        margin-left: 5px;
+    }
+  }   

@@ -1,0 +1,103 @@
+.fundo-falso{
+    overflow: auto;
+}
+.contentConteudo{
+    height: 10%;
+    overflow: auto;
+}
+.amigosAqui{
+    width: 100%;
+    height: 90%;
+    margin-top: 10px;
+}
+.divAmigoAlign{
+    width: 99%;
+    height: 60px;
+    background-color: rgb(78, 78, 78);
+    padding: 7px;
+    margin-top: 15px;
+    display: flex;
+    border-radius: 10px;
+}
+.divAmigoAlign:hover{
+    background-color: rgb(94, 94, 94);
+}
+.divAmigo{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.divFotoAmigo{
+    width: 10%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.imagemEspacoImg{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.divNomeAmigo{
+    width: 45%;
+}
+.textNomeAmigo{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+.alinhaSelectButton{
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+.divTipoDeAmizade{
+    width: 50%;
+}
+.selectTipoDeAmizade{
+    background-color: gray;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 95%;
+    height: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.selectTipoDeAmizade:hover{
+    background-color: rgb(20, 20, 20);
+    transition: 0.3s;
+}
+.opcaoTipoDeAmizade{
+    cursor: pointer;
+    border: 3px;
+}
+.buttonConfirmaTipo{
+    height: 30px;
+    background-color: gray;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 5px;
+    width: 18%;
+    cursor: pointer;
+}
+.buttonConfirmaTipo:hover{
+    background-color: rgb(20, 20, 20);
+    transition: 0.3s;
+}
+.divBotaoIrPerfilAmigo{
+    width: 5%;
+}
+.botaoIrPerfilAmigo{
+    width: 100%;
+    height: 30px;
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(39, 39, 39);
+    border: none;
+    cursor: pointer;
+}
+.botaoIrPerfilAmigo:hover{
+    background-color: rgb(20, 20, 20);
+    transition: 0.3s;
+}

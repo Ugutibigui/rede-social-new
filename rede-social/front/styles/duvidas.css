@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #18191a;
+}
+.fundo-falso{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contentPagina{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -20px;
+}
+.carregando{
+    margin-top: -20px;
+    width: 150px;
+    height: 150px;
+    border: 10px solid rgb(136, 136, 136);
+    border-top-color:rgb(255, 255, 255) ;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+}
+.tituloDuvidas{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    margin-top: 15px;
+}
+.subtituloDuvidas{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+}
+.buttonVoltar{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 30px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(0, 255, 221);
+}
+.buttonVoltar:hover{
+    background-color: rgb(1, 196, 179);
+    color: white;
+    transition: 0.3s;
+}

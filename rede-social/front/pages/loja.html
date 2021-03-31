@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/logotipo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/barra-superior.css">
+    <link rel="stylesheet" href="../styles/loja.css">
+    <title>Marketing Place</title>
+</head>
+
+<body>
+    <div class="fundo-falso" id="fundo-falso">
+        <div class="barra-superior">
+            <div class="esquerda-barra-superior">
+                <div class="local-logo-barra-superior" onclick="irPageInicial()">
+                    <img class="logo-barra-superior" src="../assets/logotipo.png" alt="">
+                </div>
+                <div class="caixa-pesquisa-barra-superior">
+                    <div class="div-lupa-caixa-pesquisa-barra-superior">
+                        <img class="lupa-caixa-pesquisa-barra-superior" src="../assets/lupa-pesquisa.png" alt="">
+                    </div>
+                </div>
+                <div class="div-input-pesquisa-barra-superior">
+                    <input class="input-pesquisa-barra-superior" type="text" placeholder="Pesquisar no Bryanbook">
+                </div>
+            </div>
+            <div class="centro-barra-superior">
+                <div class="home-button-barra-superior" title="Configurações">
+                    <div class="div-icon-home-button">
+                        <img class="icon-home-button" src="../assets/img-icon-loja.png" alt="">
+                    </div>
+                </div>
+                <div class="marketing-place-button-barra-superior" title="pagina de compras" onclick="irPageInicial()">
+                    <div class="div-icon-marketing-place-button">
+                        <img class="icon-marketing-place-icon" src="../assets/img-icon-house.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="direita-barra-superior">
+                <div class="div-foto-nome-perfil-barra-superior">
+                    <div class="div-foto-barra-superior" id="div-foto-barra-superior">
+                    </div>
+                    <div class="div-nome-apelido-superior">
+                        <h2 class="apelido-barra-superior" id="apelido-barra-superior">Apelido</h2>
+                    </div>
+                </div>
+                <div class="div-notificatios-barra-superior">
+                    <img class="icon-notifications-barra-superior" src="../assets/img-icon-notificacao.png" alt="">
+                </div>
+                <div class="div-help-barra-superior">
+                    <h1 class="icon-help-barra-superior">?</h1>
+                </div>
+                <div class="div-mais-opcoes-barra-superior" onclick="funcoesAbrir()">
+                    <div class="menu_btn configs">
+                        <h1 class="iconMenu">☟</h1>
+                        <div class="submenu" id="submenu">
+                            <ul class="lista-submenu">
+                                <li class="item" onclick="irPageInicial()">
+                                    <div class="titleItem">Pagina Inicial</div>
+                                </li>
+                                <li class="item" onclick="irPageConfig()">
+                                    <div class="titleItem">Configurações</div>
+                                </li>
+                                <li class="item" onclick="irPageLoja()">
+                                    <div class="titleItem">MarketingPlace</div>
+                                </li>
+                                <li class="item"
+                                    onclick="localStorage.setItem('usuarioAtual' , JSON.stringify('')); location.href='../pages/login.html'">
+                                    <div class="titleItem">Sair</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/back.js"></script>
+    <script src="../scripts/barra-superior.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+.divGeralAtalhosOne{
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background-color: rgb(27, 27, 27);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.divGeralAtalhosOne:hover{
+    background-color: rgb(32, 32, 32);
+    transition: 0.3s;
+}
+.esquerdaGeralAtalhosOne{
+    height: 50px;
+    width: 15%;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.textEsquerdaGeralAtalhos{
+    color: white;
+    font-size: 17px;
+}
+.direitaGeralAtalhosSuperior{
+    width: 80%;
+    margin-left: 13px;
+}
+.textTitleDivGeralAtalhos{
+    color: white;
+    font-size: 20px;
+}
+.subtextDivGeralAtalhos{
+    color: white;
+    font-size: 12px;
+}
+.divGeralAtalhos{
+    display: flex;
+    padding: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px 0px 0px 0px solid white;
+}
+.esquerdaGeralAtalhos{
+    height: 50px;
+    width: 35%;
+    margin-top: 15px;
+}
+.direitaGeralAtalhos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.tipoDireitaGeral{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    height: 50px;
+    width: 95%;
+    margin-left: 5%;
+    border-radius: 5px;
+    background-color: rgb(24, 24, 24);
+    padding: 3px;
+    cursor: pointer;
+}
+.tipoDireitaGeral:hover{
+    background-color: rgb(46, 46, 46);
+    transition: 0.3s;
+}
+.esquerdaDireitaAtalhos{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    width: 60%;
+}
+.textTitleDivGeralAtalhosTwo{
+    color: white;
+}
+.tipoPessoasVisualizam{
+    width: 200px;
+    margin-left: 15%;
+}
+.textTitleDivGeralAtalhosTree{
+    color: rgb(71, 177, 0);
+}
+.divButtonDireitaAtalhos{
+    margin-left: -10px;
+}
+.buttonDireitaAtalhos{
+    border: none;
+    width: 50px;
+    height: 25px;
+    color: white;
+    background-color: rgb(17, 17, 17);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: -10px;
+}
+.buttonDireitaAtalhos:hover{
+    background-color: rgb(43, 43, 43);
+    transition: 0.3s;
+}
