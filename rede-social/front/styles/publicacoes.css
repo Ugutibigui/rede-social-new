@@ -85,6 +85,17 @@
 .class-button-geral-pub-interacoes{
     margin: 10px;
 }
+.quantidadeCurtidas{
+    margin-left: -25px;
+    border-radius: 5%;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    min-width: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .div-button-curtir{
     display: flex;
     align-items: center;

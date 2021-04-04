@@ -27,7 +27,7 @@ function carregaAmigos(){
                         <button class="buttonConfirmaTipo">Confirmar</button>
                     </div>    
                     <div class="divBotaoIrPerfilAmigo">
-                        <button class="botaoIrPerfilAmigo">Perfil</button>
+                        <button class="botaoIrPerfilAmigo" onclick="irPerfilAmigo(${usuarioLogado[0]?.amigos[i].id})">Perfil</button>
                     </div>
                 </div>                                   
             </div>`
@@ -36,6 +36,20 @@ function carregaAmigos(){
 
 }
 carregaAmigos()
+amigoPerfilAmigo = chamaAmigoId()
+function irPerfilAmigo(id){
+    console.log("clicou")
+    for(var i = 0; i < allUsers.length; i++){
+        if(allUsers[i].principais.id == id){
+            amigoPerfilAmigo.shift()
+            var idAmigo = allUsers[i].principais.id
+            amigoPerfilAmigo.push(idAmigo)
+            mandaIdAmigoClick(amigoPerfilAmigo)
+            window.location.href = "../pages/perfilAmigo.html"
+            break
+        }
+    }
+}
 
 //
 //

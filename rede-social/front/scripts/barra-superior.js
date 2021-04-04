@@ -16,10 +16,16 @@ function funcoesAbrir(){
         document.getElementById("submenu").style.transition = "1s"
     }
 }
-function nomeEfotoBarra(){
+ async function nomeEfotoBarra(){
     var apelidoSpace = document.getElementById("apelido-barra-superior")
     var fotoSpace  = document.getElementById("div-foto-barra-superior")
-    apelidoSpace.innerText = `${usuarioAtual[0].apelido}`
+
+    let retorno = await fetch("http://localhost:8000/usuarios-banco/")
+    let meusDados = await retorno.json()
+    console.log(meusDados) 
+
+    apelidoSpace.innerText = `${meusDados[0].nome}`
+    // apelidoSpace.innerText = `${usuarioAtual[0].apelido}`
     fotoSpace.innerHTML = `<img class="img-div-barra-superior" src="${usuarioAtual[0].fotoUsuario}" alt="">`
     
     
@@ -42,4 +48,8 @@ function irAmigos(){
 }
 function irDuvidas(){
     window.location =  "../pages/duvidas.html"
+
+}
+function irNotificacoes(){
+    window.location = "../pages/notificacoes.html"
 }

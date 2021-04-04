@@ -5,30 +5,24 @@ from django.views.decorators.http import require_http_methods
 from rest_framework.decorators import api_view
 from rest_framework.decorators import parser_classes
 from rest_framework.parsers import JSONParser
-from aplicativo.models import Postagem
-from aplicativo.serializer import PostagemSerializer
+from aplicativo.models import Usuario
+from aplicativo.serializer import UsuarioSerializer
 
 
 @csrf_exempt
 @api_view(['POST'])
 @parser_classes([JSONParser])
-
-def criarPostagem(request):
+def criarUsuarioBanco(request):
     if request.method == 'POST':
         nome = request.data['nome']
-        conteudo = request.data['conteudo']
-        data = request.data['data']
-        hora = request.data['hora']
-        fotoPerfil = request.data['fotoPerfil']
-        linkDoConteudo = request.data['linkDoConteudo']
-        tipoPub = request.data['tipoPub']
-        objeto = Postagem.objects.create(nome = nome, conteudo = conteudo, data = data, hora = hora, fotoPerfil = fotoPerfil, linkDoConteudo = linkDoConteudo, tipoPub = tipoPub)
+        Usuario.objects.all().delete()
+        objeto = Usuario.objects.create(nome = nome)
         objeto.save()
 
         return JsonResponse({"mensagem": "postou"}, safe = False)
 
-def pegarPostagens(request):
+def pegarUsuarioBanco(request):
     if request.method == 'GET':
-        postagem = Postagem.objects.all()
-        serializer = PostagemSerializer(postagem, many=True)
+        usuario = Usuario.objects.all()
+        serializer = UsuarioSerializer(usuario, many=True)
         return JsonResponse(serializer.data, safe=False)

@@ -19,6 +19,12 @@ function localStorageMandaPublicacoes(publicacoes) {
 function chamaPublicacoesBack() {
     return JSON.parse(localStorage.getItem("posts")) || []
 }
+function mandaIdAmigoClick(amigoPerfilAmigo){
+    localStorage.setItem("amigoIdPerfil", JSON.stringify(amigoPerfilAmigo))
+}
+function chamaAmigoId() {
+    return JSON.parse(localStorage.getItem("amigoIdPerfil")) || []
+}
 
 //ARRUMAR ISSO HEIN, SÃO SE ESQUEÇA 
 function amiguitosFunction() {

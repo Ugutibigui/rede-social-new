@@ -255,6 +255,8 @@
     height: 45px;
     border-radius: 50%;
     background-image: url("../assets/icon-foto.png");
+    object-fit: cover;
+    object-position: top;
 }
 .alinha-name-user-adc{
     width: 220px;

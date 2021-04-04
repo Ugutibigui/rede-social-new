@@ -70,6 +70,13 @@ textarea {
     height: 50px;
     border-radius: 50%;
 }
+.img-foto-perfil-div1-pub-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
 .part2-div1-nome-pub-img{
     margin-left: 10px;
 }

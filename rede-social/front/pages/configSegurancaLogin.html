@@ -47,7 +47,7 @@
                         <h2 class="apelido-barra-superior" id="apelido-barra-superior">Apelido</h2>
                     </div>
                 </div>
-                <div class="div-notificatios-barra-superior">
+                <div class="div-notificatios-barra-superior" onclick="irNotificacoes()">
                     <img class="icon-notifications-barra-superior" src="../assets/img-icon-notificacao.png" alt="">
                 </div>
                 <div class="div-help-barra-superior" onclick="irDuvidas()">
@@ -120,18 +120,29 @@
                         <div class="espacoImgContent"><img class="imagemEspacoImg" src="../assets/img-icon-amizades.png"
                                 alt=""></div><a class="nameContent" href="../pages/configAmizades.html">Amizades</a>
                     </div>
-                    <div class="itemContent">
+                    <div class="itemContent"  onclick="irNotificacoes()">
                         <div class="espacoImgContent"><img class="imagemEspacoImg"
                                 src="../assets/img-icon-notificacao.png" alt=""></div><a class="nameContent"
                             href="">Notificações</a>
                     </div>
-                    <div class="itemContent">
+                    <div class="itemContent" onclick="irDuvidas()">
                         <div class="espacoImgContent"><img class="imagemEspacoImg" src="../assets/img-icon-ajuda.png"
                                 alt=""></div><a class="nameContent" href="">Ajuda</a>
                     </div>
                 </div>
             </div>
             <div class="contentConteudo">
+                <div class="div-altera-senha" id="div-altera-senha">
+                    <div class="alinha-altera-senha">
+                        <h1 class="tituloAlteraSenha">Alterar senha</h1>
+                        <input type="password"  class="input-senha" placeholder="Insira aqui sua senha atual" id="senha-atual-input">
+                        <div class="alinha-input-nova-senha">
+                            <input type="password" class="input-nova-senha" placeholder="Insira aqui sua senha nova" id="nova-senha-input">
+                            <input type="password"  class="input-nova-senha" placeholder="Confirme sua senha nova" id="nova-senha-input-confirma">
+                        </div>
+                        <button class="button-senha-nova" onclick="alteraSenha()">Alterar</button>
+                    </div>
+                </div>
                 <h1 class="tituloContentConteudo">Segurança e Login</h1>
                 <div class="divContent">
                     <div class="superiorDivContent">
@@ -178,7 +189,7 @@
                                 <h2 class="part1TextConteudo">Alterar senha</h2>
                                 <h3 class="part2TextConteudo">É recomendavel usar uma senha forte que você não esteja usando em nenhum outro lugar</h3>
                             </div>
-                            <button class="buttonConteudoInferior">Alterar</button>
+                            <button class="buttonConteudoInferior" onclick="abreAlteraSenha()">Alterar</button>
                         </div>
                     </div>
                 </div>
@@ -188,7 +199,7 @@
     <script src="../scripts/back.js"></script>
     <script src="../scripts/barra-superior.js"></script>
     <script src="../scripts/pesquisaAmigos.js"></script>
-    <script src="../scripts/configuracoes.js"></script>
+    <script src="../scripts/configuracoes-seguranca.js"></script>
 </body>
 
 </html>

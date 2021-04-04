@@ -28,7 +28,7 @@ function pesquisarAmigo() {
             <div class="divUsuarioEncontrado">
                 <div class="arrumaDivUsuarioEncontrado">
                     <div class="divFotoUsuarioEncontrado">
-                        <img class="fotoUsuarioEncontrado" src="">
+                        <img class="fotoUsuarioEncontrado" src="${allUsers[i].visuais.fotoUsuario}">
                     </div>
                     <div class="divNomeUsuarioEncontrado">
                         <h3 class="textDivNomeUsuarioEncontrado">${allUsers[i].principais.apelido}</h3>

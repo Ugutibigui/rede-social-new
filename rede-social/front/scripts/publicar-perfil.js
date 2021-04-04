@@ -88,6 +88,7 @@ function carregaTodosPosts() {
     var caixaPubs = document.getElementById("area-pubs")
     caixaPubs.innerHTML = ""
     for (let i = 0; i < publicacoes.length; i++) {
+    if(publicacoes[i].idUser == usuarioAtual[0].id){
          if (publicacoes[i].tipoPub === "texto") {
             caixaPubs.innerHTML += `<div class="div-publicacao-pronta">
             <div class="superior-pub-pronta">
@@ -110,8 +111,9 @@ function carregaTodosPosts() {
             <div class="inferior-pub-pronta">${publicacoes[i].conteudo}</div>
             <hr>
             <div class="interacoes-pub-pronta">
+            <h2 class="quantidadeCurtidas">${publicacoes[i].curtidas.length}</h2>
                 <div class="div-button-curtir , class-button-geral-pub-interacoes">
-                    <div class="button-curtir">
+                    <div class="button-curtir" onclick="curtirPost(${publicacoes[i].id})">
                         <img src="../assets/img-icon-like.png" alt="" class="pic-icon-curtir">
                         <h3 class="text-curtir">Curtir</h3>
                     </div>
@@ -152,8 +154,9 @@ function carregaTodosPosts() {
             </div>
             <hr>
             <div class="interacoes-pub-pronta">
+            <h2 class="quantidadeCurtidas">${publicacoes[i].curtidas.length}</h2>
                 <div class="div-button-curtir , class-button-geral-pub-interacoes">
-                    <div class="button-curtir">
+                    <div class="button-curtir" onclick="curtirPost(${publicacoes[i].id})">
                         <img src="../assets/img-icon-like.png" alt="" class="pic-icon-curtir">
                         <h3 class="text-curtir">Curtir</h3>
                     </div>
@@ -192,8 +195,9 @@ function carregaTodosPosts() {
             </div>
             <hr>
             <div class="interacoes-pub-pronta">
+            <h2 class="quantidadeCurtidas">${publicacoes[i].curtidas.length}</h2>
                 <div class="div-button-curtir , class-button-geral-pub-interacoes">
-                    <div class="button-curtir">
+                    <div class="button-curtir" onclick="curtirPost(${publicacoes[i].id})">
                         <img src="../assets/img-icon-like.png" alt="" class="pic-icon-curtir">
                         <h3 class="text-curtir">Curtir</h3>
                     </div>
@@ -208,6 +212,7 @@ function carregaTodosPosts() {
             </div>`
             console.log("DEU IMAGEM")
         }
+    }
     }
 }
 carregaTodosPosts()
@@ -231,6 +236,7 @@ carregaTodosPosts()
     let dataPost = `${dia}/${mes}/${ano}`
     var tipo = "texto"
     var fotoUserPost = usuarioAtual[0].fotoUsuario
+    var id = publicacoes.length + 1
     caixaPubs.innerHTML += `<div class="div-publicacao-pronta">
     <div class="superior-pub-pronta">
         <div class="content-pub-pronta-superior">
@@ -253,7 +259,7 @@ carregaTodosPosts()
     <hr>
     <div class="interacoes-pub-pronta">
         <div class="div-button-curtir , class-button-geral-pub-interacoes">
-            <div class="button-curtir">
+            <div class="button-curtir" onclick="curtirPost(${id})">
                 <img src="../assets/img-icon-like.png" alt="" class="pic-icon-curtir">
                 <h3 class="text-curtir">Curtir</h3>
             </div>
@@ -271,9 +277,12 @@ carregaTodosPosts()
         conteudo: caixaDeTexto,
         data: dataPost,
         hora: horaPost,
-        fotoPerfil: "essa eh minha foto",
+        fotoPerfil: fotoUserPost,
         tipoPub: tipo,
-        linkDoConteudo: "Essa publicação não precisa de link"
+        linkDoConteudo: "Essa publicação não precisa de link",
+        id: id,
+        idUser: usuarioAtual[0].id,
+        curtidas:[]
     }
     publicacoes.push(pub)
     localStorageMandaPublicacoes(publicacoes)
@@ -300,6 +309,7 @@ async function publicaVideo(){
     let dataPostVideo = `${diaVideo}/${mesVideo}/${anoVideo}`
     var tipo = "video"
     var fotoUserPost = usuarioAtual[0].fotoUsuario
+    var id = publicacoes.length + 1
     caixaPubs.innerHTML += `<div class="div-publicacao-pronta">
     <div class="superior-pub-pronta">
         <div class="content-pub-pronta-superior">
@@ -327,7 +337,7 @@ async function publicaVideo(){
     <hr>
     <div class="interacoes-pub-pronta">
         <div class="div-button-curtir , class-button-geral-pub-interacoes">
-            <div class="button-curtir">
+            <div class="button-curtir" onclick="curtirPost(${id})">
                 <img src="../assets/img-icon-like.png" alt="" class="pic-icon-curtir">
                 <h3 class="text-curtir">Curtir</h3>
             </div>
@@ -346,9 +356,12 @@ async function publicaVideo(){
         conteudo: caixaDeTextoVideo,
         data: dataPostVideo,
         hora: horaPostVideo,
-        fotoPerfil: "essa eh minha foto",
+        fotoPerfil: fotoUserPost,
         tipoPub: tipo,
-        linkDoConteudo: linkVideo
+        linkDoConteudo: linkVideo,
+        id: id,
+        idUser: usuarioAtual[0].id,
+        curtidas:[]
     }
     publicacoes.push(pub)
     localStorageMandaPublicacoes(publicacoes)
@@ -376,6 +389,7 @@ async function publicaImg(){
     let dataPostImg = `${diaImg}/${mesImg}/${anoImg}`
     var tipo = "imagem"
     var fotoUserPost = usuarioAtual[0].fotoUsuario
+    var id = publicacoes.length + 1
     caixaPubs.innerHTML += `<div class="div-publicacao-pronta">
     <div class="superior-pub-pronta">
         <div class="content-pub-pronta-superior">
@@ -401,7 +415,7 @@ async function publicaImg(){
     <hr>
     <div class="interacoes-pub-pronta">
         <div class="div-button-curtir , class-button-geral-pub-interacoes">
-            <div class="button-curtir">
+            <div class="button-curtir" onclick="curtirPost(${id})">
                 <img src="../assets/img-icon-like.png" alt="" class="pic-icon-curtir">
                 <h3 class="text-curtir">Curtir</h3>
             </div>
@@ -414,16 +428,55 @@ async function publicaImg(){
         </div>
     </div>
     </div>`
+    todosUsuarios = usuariosBack()
     let pub = {
         nome: nomeUserPostImg,
         conteudo: caixaDeTextoImg,
         data: dataPostImg,
         hora: horaPostImg,
-        fotoPerfil: "essa eh minha foto",
+        fotoPerfil: fotoUserPost,
         tipoPub: tipo,
-        linkDoConteudo: linkImg
+        linkDoConteudo: linkImg,
+        id: id,
+        idUser: usuarioAtual[0].id,
+        curtidas:[]
     }
     publicacoes.push(pub)
     localStorageMandaPublicacoes(publicacoes)
+
+    let imageUser = {
+        id: id,
+        idUser: usuarioAtual[0].id,
+        linkImage: linkImg
+    }
+    usuarioAtual[0].imagensUsuario.push(imageUser)
+    mandaUsuarioLogadoBack(usuarioAtual)
+    for(var i = 0; i < todosUsuarios.length; i++){
+        if(usuarioAtual[0].id == todosUsuarios[i].principais.id){
+            todosUsuarios[i].visuais.imagensUsuario.push(imageUser)
+            mandarUsuarioBack(todosUsuarios)
+        }
+    }
+    var localImgUser = document.getElementById("localImagesUser")
+    localImgUser.innerHTML = ""
+    carregaFotosUser()
     fecharAbaPubImg()
+}
+function curtirPost(id){
+    var publicacoes = chamaPublicacoesBack()
+    for(var i = 0; i < publicacoes.length; i++){
+        if(publicacoes[i].id == id){
+            for(var c = 0; c < publicacoes[i].curtidas.length; c++){
+                if(publicacoes[i].curtidas[c] == usuarioAtual[0].id){
+                    publicacoes[i].curtidas.splice(c,1)
+                    localStorageMandaPublicacoes(publicacoes)
+                    return carregaTodosPosts()
+                }
+            }
+            publicacoes[i].curtidas.push(usuarioAtual[0].id)
+            localStorageMandaPublicacoes(publicacoes)
+            carregaTodosPosts()
+            break
+        }
+    }
 }

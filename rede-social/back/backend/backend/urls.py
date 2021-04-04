@@ -4,6 +4,6 @@ from aplicativo import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('criapost/', views.criarPostagem),
-    path('postagens/', views.pegarPostagens)
+    path('cria-usuario-banco/', views.criarUsuarioBanco),
+    path('usuarios-banco/', views.pegarUsuarioBanco)
 ]

@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from aplicativo.models import Postagem
+from aplicativo.models import Usuario
 
-class PostagemSerializer( serializers.ModelSerializer):
+class UsuarioSerializer( serializers.ModelSerializer):
     class Meta:
-        model = Postagem
-        fields = ['id','nome', 'conteudo','data','hora','fotoPerfil','linkDoConteudo','tipoPub']
+        model = Usuario
+        fields = ['id','nome']

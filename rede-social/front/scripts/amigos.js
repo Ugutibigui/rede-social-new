@@ -36,6 +36,7 @@ function adicionarAmigo(id){
             let res = {
                 fotoUsuario: usuarioLogado[0]?.fotoUsuario,
                 id: usuarioLogado[0]?.id,
+                imagensUsuario: usuarioLogado[0]?.imagensUsuario,
                 principais: {
                     apelido: usuarioLogado[0].apelido
                 }
@@ -49,6 +50,7 @@ function adicionarAmigo(id){
     let resultado = {
         fotoUsuario: amigo?.visuais.fotoUsuario,
         id: amigo?.principais.id,
+        imagensUsuario: amigo?.visuais.imagensUsuario,
         principais: {
             apelido: amigo.principais.apelido
         }
@@ -56,7 +58,7 @@ function adicionarAmigo(id){
     }
     usuarioLogado[0].amigos.push(resultado)
     for(let i = 0; i < allUsers.length; i++){
-        if(allUsers[i].principais.id == id){
+        if(allUsers[i].principais.id == usuarioLogado[0].id){
             allUsers[i].visuais.amigos.push(resultado)
             break
         }
@@ -72,9 +74,10 @@ function carregaAmigos(){
     container.innerHTML = ""
 
     for(let i = 0; i < usuarioLogado[0].amigos.length; i++){
-        if(usuarioLogado[0].id !== usuarioLogado[0].amigos[i].id){
-            container.innerHTML += `<div class="divUser"><div class="div-alinha-itens-adc"><img class="fotoUsuariosSujest" src="${usuarioLogado[0]?.amigos[i].fotoUsuario}" alt=""><div class="alinha-name-user-adc"><p class="users-name">${usuarioLogado[0].amigos[i].principais.apelido}</p></div><div class="doButton"><button id="botaoAdicionar" class="botaoAdicionar">Conversar</button></div></div></div>`
-        }
+        
+            container.innerHTML += `<div class="divUser"><div class="div-alinha-itens-adc"><img class="fotoUsuariosSujest" src="${usuarioLogado[0]?.amigos[i].fotoUsuario}" alt=""><div class="alinha-name-user-adc"><p class="users-name">${usuarioLogado[0].amigos[i].principais.apelido}</p></div><div class="doButton"><button id="botaoPerfil" class="botaoAdicionar" onclick="irPerfilAmigo(${usuarioLogado[0]?.amigos[i].id})">Perfil</button></div></div></div>`
+        
+        console.log("a")
     }
 
 }
@@ -85,3 +88,19 @@ function atualizaNumeroAmigos(){
     localNumeroAmigos.innerHTML = `(${usuarioLogado[0].amigos.length} amigos)`
 }
 atualizaNumeroAmigos()
+
+var amigoPerfilAmigo = []
+
+function irPerfilAmigo(id){
+    console.log("clicou")
+    for(var i = 0; i < allUsers.length; i++){
+        if(allUsers[i].principais.id == id){
+            amigoPerfilAmigo.shift()
+            var idAmigo = allUsers[i].principais.id
+            amigoPerfilAmigo.push(idAmigo)
+            mandaIdAmigoClick(amigoPerfilAmigo)
+            window.location.href = "../pages/perfilAmigo.html"
+            break
+        }
+    }
+}

@@ -7,3 +7,4 @@ function trocaFotoOption(){
     localFotoOption.innerHTML = `<img src="${usuarioLogado[0].fotoUsuario}" alt="" class="imgOptionUser">`
 }
 trocaFotoOption()
+

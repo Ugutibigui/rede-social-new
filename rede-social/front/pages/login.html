@@ -32,6 +32,22 @@
             <button type="submit" class="botao-cadastro" id="botao-cadastro" onclick="cadastrarNovoUsuario()">Cadastre-se</button>
         </div>
     </div>
+    <div class="div-recupera-senha" id="div-recupera-senha">
+        <div class="alinha-itens-recupera-senha">
+            <div class="superior-div-recupera-senha">
+                <h1 class="titulo-recupera-senha">Recuperar senha</h1>
+                <h1 class="fecha-div-recupera-senha" onclick="fecharDivRecuperaSenha()">X</h1>
+            </div>
+            
+            <div class="alinha-itens-inputs">
+                <input type="text" class="input-info" placeholder="Escreva aqui o seu apelido" id="input-info-apelido">
+                <input type="text" class="input-info" placeholder="Escreva aqui o seu nome" id="input-info-nome">
+                <input type="text" class="input-info" placeholder="Escreva aqui o seu sobrenome" id="input-info-sobrenome">
+                <button class="button-recuperar" onclick="recuperarSenha()">Recuperar</button>
+                <div class="aparece-senha" id="aparece-senha"></div>
+            </div>
+        </div>
+    </div>
     <div class="fundo-falso" id="fundo-falso">
         <div class="geral">
             <div class="texts-inicio">
@@ -51,7 +67,7 @@
                 </div>
                 <div class="caixa-button">
                     <button class="botao-logar" type="submit" onclick="entrar()">Entrar</button>
-                    <a class="link-esquece-senha" href="#">Esqueceu a senha?</a>
+                    <p class="link-esquece-senha" onclick="recuperarSenhaAbre()">Esqueceu a senha?</p>
                 </div>
                 <hr class="hr-logar">
                 <div class="caixa-botao-cria-conta">
@@ -88,5 +104,6 @@
     </div>
     <script src="../scripts/back.js"></script>
     <script src="../scripts/login.js"></script>
+    <script src="../scripts/recuperar-senha.js"></script>
 </body>
 </html>

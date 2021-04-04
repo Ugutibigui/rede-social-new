@@ -62,13 +62,13 @@ function cadastrarNovoUsuario() {
         }
     }
     
-    let novoUsuario = {principais:{apelido: apelido, senha: senha, id: idUsuario, },visuais:{ nomeUsuario: nomeUsuario, sobrenome: sobrenomeUsuario, amigos:[], fotoUsuario: fotoUsuario}}
+    let novoUsuario = {principais:{apelido: apelido, senha: senha, id: idUsuario, },visuais:{ nomeUsuario: nomeUsuario, sobrenome: sobrenomeUsuario, amigos:[], fotoUsuario: fotoUsuario, biografia: "", fotoCapa: "", imagensUsuario:[]}}
     usuarios.push(novoUsuario)
     mandarUsuarioBack(usuarios)
     alert("Novo usuario cadastrado, por favor faça login")
     fecharCadastro()
 }
-function entrar() {
+  async function entrar() {
     let apelido = document.getElementById("apelido-login").value
     let senha = document.getElementById("caixa-senha-login").value
     if (apelido === "") {
@@ -86,9 +86,25 @@ function entrar() {
         if (usuarios[i].principais.apelido === apelido && usuarios[i].principais.senha === senha) {
             //fotoUser = usuarios[i].fotoUsuario
             Userlogado = true;
-            let usuarioAtual = { apelido: apelido, senha: senha, id: usuarios[i].principais.id, amigos: usuarios[i].visuais.amigos, nome: usuarios[i].visuais.nomeUsuario, sobrenome: usuarios[i].visuais.sobrenome, fotoUsuario: usuarios[i].visuais.fotoUsuario}
+            let usuarioAtual = { apelido: apelido, senha: senha, id: usuarios[i].principais.id, amigos: usuarios[i].visuais.amigos, nome: usuarios[i].visuais.nomeUsuario, sobrenome: usuarios[i].visuais.sobrenome, fotoUsuario: usuarios[i].visuais.fotoUsuario, biografia: usuarios[i].visuais.biografia, fotoCapa: usuarios[i].visuais.fotoCapa, imagensUsuario: usuarios[i].visuais.imagensUsuario }
             usuarioLogado.push(usuarioAtual)
             mandaUsuarioLogadoBack(usuarioLogado)
+
+
+            let myHeaders = new Headers({
+                "Content-Type": "application/json",
+              });
+                      let retorno = await fetch("http://localhost:8000/cria-usuario-banco/",{
+                          method: "POST",
+                          headers: myHeaders,
+                          body: JSON.stringify({
+                            nome: apelido
+                            }) 
+                      })
+                      let meusDados = await retorno.json()
+                      console.log(meusDados)
+
+
             console.log(i)
             break
         } else Userlogado = false;
